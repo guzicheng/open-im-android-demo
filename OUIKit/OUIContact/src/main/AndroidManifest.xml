@@ -6,21 +6,21 @@
         <activity
             android:name=".ui.AddRelationActivity"
             android:exported="false"/>
-        <activity
+        <!-- <activity
             android:name=".ui.search.SearchGroupActivity"
             android:exported="false"/>
         <activity
             android:name=".ui.search.SearchGroupAndFriendsActivity"
-            android:exported="false" />
+            android:exported="false" /> -->
         <activity
             android:name=".ui.CreateLabelActivity"
             android:exported="false" />
         <activity
             android:name=".ui.LabelActivity"
             android:exported="false" />
-        <activity
+        <!-- <activity
             android:name=".ui.search.SearchGroupMemberActivity"
-            android:exported="false" />
+            android:exported="false" /> -->
         <activity
             android:name=".ui.MyGroupActivity"
             android:exported="false" />

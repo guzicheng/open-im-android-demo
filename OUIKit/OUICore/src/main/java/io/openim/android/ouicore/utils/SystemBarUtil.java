@@ -60,13 +60,16 @@ public class SystemBarUtil {
 
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 			// check theme attrs
-			int[] attrs = { android.R.attr.windowTranslucentStatus, android.R.attr.windowTranslucentNavigation };
-			TypedArray a = activity.obtainStyledAttributes(attrs);
+//			int[] attrs = { android.R.attr.windowTranslucentStatus, android.R.attr.windowTranslucentNavigation };
+//			TypedArray a = activity.getTheme().obtainStyledAttributes(attrs);
 			try {
-				mStatusBarAvailable = a.getBoolean(0, false);
-				mNavBarAvailable = a.getBoolean(1, false);
+//				mStatusBarAvailable = a.getBoolean(0, false);
+//				mNavBarAvailable = a.getBoolean(1, false);
+                TypedValue typedValue = new TypedValue();
+                mStatusBarAvailable = activity.getTheme().resolveAttribute(android.R.attr.windowTranslucentStatus, typedValue, true);
+                mNavBarAvailable = activity.getTheme().resolveAttribute(android.R.attr.windowTranslucentNavigation, typedValue, true);
 			} finally {
-				a.recycle();
+//				a.recycle();
 			}
 
 			// check window flags

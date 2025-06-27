@@ -251,6 +251,10 @@ public class PreviewMediaActivity extends BasicActivity<ActivityPreviewBinding> 
         super.onBackPressed();
     }
 
+    public void toBack(View view) {
+        onBackPressed();
+    }
+
     @Override
     protected void onPause() {
         super.onPause();

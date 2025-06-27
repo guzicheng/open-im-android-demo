@@ -43,7 +43,9 @@ android {
 }
 
 dependencies {
-    api fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    // api fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api 'com.hjq.window:easywindow:10.2'
     //openIM sdk
     api "io.openim:core-sdk:${rootProject.ext.versions.android_sdk_core}"
     api "io.openim:android-sdk:${rootProject.ext.versions.android_sdk}"
